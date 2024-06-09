@@ -41,6 +41,7 @@
             // 
             // btnUpdate
             // 
+            this.btnUpdate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -55,6 +56,7 @@
             // 
             // txtCurrPass
             // 
+            this.txtCurrPass.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCurrPass.Location = new System.Drawing.Point(55, 160);
             this.txtCurrPass.Name = "txtCurrPass";
             this.txtCurrPass.ReadOnly = true;
@@ -63,6 +65,7 @@
             // 
             // txtCurrUser
             // 
+            this.txtCurrUser.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCurrUser.Location = new System.Drawing.Point(55, 94);
             this.txtCurrUser.Name = "txtCurrUser";
             this.txtCurrUser.ReadOnly = true;
@@ -71,6 +74,7 @@
             // 
             // lblPass
             // 
+            this.lblPass.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPass.AutoSize = true;
             this.lblPass.Location = new System.Drawing.Point(52, 144);
             this.lblPass.Name = "lblPass";
@@ -80,6 +84,7 @@
             // 
             // lblUser
             // 
+            this.lblUser.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblUser.AutoSize = true;
             this.lblUser.Location = new System.Drawing.Point(52, 78);
             this.lblUser.Name = "lblUser";
@@ -89,6 +94,7 @@
             // 
             // txtNewPass
             // 
+            this.txtNewPass.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNewPass.Location = new System.Drawing.Point(518, 160);
             this.txtNewPass.Name = "txtNewPass";
             this.txtNewPass.Size = new System.Drawing.Size(202, 20);
@@ -96,6 +102,7 @@
             // 
             // txtNewUser
             // 
+            this.txtNewUser.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNewUser.Location = new System.Drawing.Point(518, 94);
             this.txtNewUser.Name = "txtNewUser";
             this.txtNewUser.Size = new System.Drawing.Size(202, 20);
@@ -103,6 +110,7 @@
             // 
             // lblNewPass
             // 
+            this.lblNewPass.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNewPass.AutoSize = true;
             this.lblNewPass.Location = new System.Drawing.Point(515, 144);
             this.lblNewPass.Name = "lblNewPass";
@@ -112,6 +120,7 @@
             // 
             // lblNewUser
             // 
+            this.lblNewUser.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNewUser.AutoSize = true;
             this.lblNewUser.Location = new System.Drawing.Point(515, 78);
             this.lblNewUser.Name = "lblNewUser";

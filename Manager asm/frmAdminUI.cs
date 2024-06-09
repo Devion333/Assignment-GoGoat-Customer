@@ -34,7 +34,8 @@ namespace Manager_asm.AdminPages
 
         private void frmAdminUI_Load(object sender, EventArgs e)
         {
-
+            frmAdminMain frmAdminMain = new frmAdminMain();
+            addpage(frmAdminMain);
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -59,5 +60,22 @@ namespace Manager_asm.AdminPages
             return Session.CurrentUsername;
         }
 
+        private void btnSales_Click(object sender, EventArgs e)
+        {
+                frmMonthlySalesReportControl frmmonthlySalesReportControl = new frmMonthlySalesReportControl();
+                addpage(frmmonthlySalesReportControl);
+        }
+
+        private void btnFoodfbck_Click(object sender, EventArgs e)
+        {
+            frmFoodfbck frmFoodfbck = new frmFoodfbck();
+            addpage(frmFoodfbck);
+        }
+
+        private void btnReservationfbck_Click(object sender, EventArgs e)
+        {
+            frmReservationfbck frmReservationfbck = new frmReservationfbck();
+            addpage(frmReservationfbck);
+        }
     }
 }

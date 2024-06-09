@@ -33,17 +33,18 @@
             this.btnLogout = new System.Windows.Forms.Button();
             this.lblAdmin = new System.Windows.Forms.Label();
             this.lblgogoat = new System.Windows.Forms.Label();
-            this.picboxlogo = new System.Windows.Forms.PictureBox();
             this.btnSales = new System.Windows.Forms.Button();
             this.btnProfile = new System.Windows.Forms.Button();
-            this.btnFeedback = new System.Windows.Forms.Button();
+            this.btnFoodfbck = new System.Windows.Forms.Button();
             this.btnManage = new System.Windows.Forms.Button();
             this.panelHeader2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnReservationfbck = new System.Windows.Forms.Button();
+            this.picboxlogo = new System.Windows.Forms.PictureBox();
             this.panelHeader1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picboxlogo)).BeginInit();
             this.panelHeader2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxlogo)).BeginInit();
             this.SuspendLayout();
             // 
             // panelHeader1
@@ -97,35 +98,25 @@
             this.lblgogoat.TabIndex = 0;
             this.lblgogoat.Text = "GO-GOAT";
             // 
-            // picboxlogo
-            // 
-            this.picboxlogo.Image = ((System.Drawing.Image)(resources.GetObject("picboxlogo.Image")));
-            this.picboxlogo.Location = new System.Drawing.Point(24, 7);
-            this.picboxlogo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.picboxlogo.Name = "picboxlogo";
-            this.picboxlogo.Size = new System.Drawing.Size(82, 38);
-            this.picboxlogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picboxlogo.TabIndex = 2;
-            this.picboxlogo.TabStop = false;
-            // 
             // btnSales
             // 
             this.btnSales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSales.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSales.ForeColor = System.Drawing.Color.Chocolate;
-            this.btnSales.Location = new System.Drawing.Point(567, 0);
+            this.btnSales.Location = new System.Drawing.Point(567, -5);
             this.btnSales.Name = "btnSales";
             this.btnSales.Size = new System.Drawing.Size(138, 48);
             this.btnSales.TabIndex = 4;
             this.btnSales.Text = "Sales Report";
             this.btnSales.UseVisualStyleBackColor = true;
+            this.btnSales.Click += new System.EventHandler(this.btnSales_Click);
             // 
             // btnProfile
             // 
             this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProfile.ForeColor = System.Drawing.Color.Chocolate;
-            this.btnProfile.Location = new System.Drawing.Point(851, 0);
+            this.btnProfile.Location = new System.Drawing.Point(998, -5);
             this.btnProfile.Name = "btnProfile";
             this.btnProfile.Size = new System.Drawing.Size(138, 48);
             this.btnProfile.TabIndex = 2;
@@ -133,17 +124,18 @@
             this.btnProfile.UseVisualStyleBackColor = true;
             this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
-            // btnFeedback
+            // btnFoodfbck
             // 
-            this.btnFeedback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFeedback.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFeedback.ForeColor = System.Drawing.Color.Chocolate;
-            this.btnFeedback.Location = new System.Drawing.Point(711, 0);
-            this.btnFeedback.Name = "btnFeedback";
-            this.btnFeedback.Size = new System.Drawing.Size(138, 48);
-            this.btnFeedback.TabIndex = 1;
-            this.btnFeedback.Text = "Feedback";
-            this.btnFeedback.UseVisualStyleBackColor = true;
+            this.btnFoodfbck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFoodfbck.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFoodfbck.ForeColor = System.Drawing.Color.Chocolate;
+            this.btnFoodfbck.Location = new System.Drawing.Point(711, -5);
+            this.btnFoodfbck.Name = "btnFoodfbck";
+            this.btnFoodfbck.Size = new System.Drawing.Size(138, 48);
+            this.btnFoodfbck.TabIndex = 1;
+            this.btnFoodfbck.Text = "Food Feedback";
+            this.btnFoodfbck.UseVisualStyleBackColor = true;
+            this.btnFoodfbck.Click += new System.EventHandler(this.btnFoodfbck_Click);
             // 
             // btnManage
             // 
@@ -151,7 +143,7 @@
             this.btnManage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnManage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManage.ForeColor = System.Drawing.Color.Chocolate;
-            this.btnManage.Location = new System.Drawing.Point(428, 0);
+            this.btnManage.Location = new System.Drawing.Point(423, -5);
             this.btnManage.Name = "btnManage";
             this.btnManage.Size = new System.Drawing.Size(138, 48);
             this.btnManage.TabIndex = 0;
@@ -161,10 +153,11 @@
             // 
             // panelHeader2
             // 
+            this.panelHeader2.Controls.Add(this.btnReservationfbck);
             this.panelHeader2.Controls.Add(this.panel1);
             this.panelHeader2.Controls.Add(this.btnSales);
             this.panelHeader2.Controls.Add(this.btnProfile);
-            this.panelHeader2.Controls.Add(this.btnFeedback);
+            this.panelHeader2.Controls.Add(this.btnFoodfbck);
             this.panelHeader2.Controls.Add(this.btnManage);
             this.panelHeader2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader2.Location = new System.Drawing.Point(0, 48);
@@ -182,11 +175,36 @@
             // 
             // panel2
             // 
-            this.panel2.Location = new System.Drawing.Point(0, 89);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 86);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1560, 435);
+            this.panel2.Size = new System.Drawing.Size(1560, 438);
             this.panel2.TabIndex = 9;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // btnReservationfbck
+            // 
+            this.btnReservationfbck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReservationfbck.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReservationfbck.ForeColor = System.Drawing.Color.Chocolate;
+            this.btnReservationfbck.Location = new System.Drawing.Point(854, -5);
+            this.btnReservationfbck.Name = "btnReservationfbck";
+            this.btnReservationfbck.Size = new System.Drawing.Size(138, 48);
+            this.btnReservationfbck.TabIndex = 10;
+            this.btnReservationfbck.Text = "Reservation Feedback";
+            this.btnReservationfbck.UseVisualStyleBackColor = true;
+            this.btnReservationfbck.Click += new System.EventHandler(this.btnReservationfbck_Click);
+            // 
+            // picboxlogo
+            // 
+            this.picboxlogo.Image = ((System.Drawing.Image)(resources.GetObject("picboxlogo.Image")));
+            this.picboxlogo.Location = new System.Drawing.Point(24, 7);
+            this.picboxlogo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.picboxlogo.Name = "picboxlogo";
+            this.picboxlogo.Size = new System.Drawing.Size(82, 38);
+            this.picboxlogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picboxlogo.TabIndex = 2;
+            this.picboxlogo.TabStop = false;
             // 
             // frmAdminUI
             // 
@@ -201,8 +219,8 @@
             this.Load += new System.EventHandler(this.frmAdminUI_Load);
             this.panelHeader1.ResumeLayout(false);
             this.panelHeader1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picboxlogo)).EndInit();
             this.panelHeader2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picboxlogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -216,10 +234,11 @@
         private System.Windows.Forms.PictureBox picboxlogo;
         private System.Windows.Forms.Button btnSales;
         private System.Windows.Forms.Button btnProfile;
-        private System.Windows.Forms.Button btnFeedback;
+        private System.Windows.Forms.Button btnFoodfbck;
         private System.Windows.Forms.Button btnManage;
         private System.Windows.Forms.Panel panelHeader2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnReservationfbck;
     }
 }

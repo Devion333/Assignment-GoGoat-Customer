@@ -27,8 +27,6 @@ namespace Manager_asm.CustomerPages
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"{customerId}");
-
             this.Close();
         }
 

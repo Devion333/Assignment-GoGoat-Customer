@@ -14,11 +14,13 @@ namespace Manager_asm.CustomerPages
     public partial class Page_Request : UserControl
     {   
         Customer customer;
+        private int customerId;
 
-        public Page_Request()
+        public Page_Request(int customerID)
         {
             InitializeComponent();
-            customer = new Customer(1);
+            customer = new Customer(customerID);
+            this.customerId = customerID;
 
         }
 

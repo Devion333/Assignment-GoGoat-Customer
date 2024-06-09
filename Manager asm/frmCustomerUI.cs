@@ -47,13 +47,13 @@ namespace Manager_asm
 
         private void btnreservation_Click(object sender, EventArgs e)
         {
-            Page_Request page_Reservation_Customer = new Page_Request();
-            addpage(page_Reservation_Customer);
+            Page_Request page_Request = new Page_Request(customerID);
+            addpage(page_Request);
         }
 
         private void btnprofile_Click(object sender, EventArgs e)
         {
-            Page_Profile page_Profile = new Page_Profile(username);
+            Page_ProfileCus page_Profile = new Page_ProfileCus(customerID, username);
             addpage(page_Profile);
         }
 
@@ -72,7 +72,7 @@ namespace Manager_asm
 
         private void btnOrders_Click(object sender, EventArgs e)
         {
-            Page_Orders page_Orders = new Page_Orders();
+            Page_Orders page_Orders = new Page_Orders(customerID);
             addpage(page_Orders);
         }
     }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -19,6 +20,8 @@ namespace Manager_asm
             InitializeDataCart();
         }
 
+        public Order() { }
+
         private void InitializeDataCart()
         {
             lstCart.View = View.Details;
@@ -31,9 +34,34 @@ namespace Manager_asm
 
         public void AddToCart(MenuZ menuItem)
         {
+            // Check if the ItemID is set
+            if (menuItem.ItemID == 0)
+            {
+                // Retrieve the ItemID from the database based on the Item name
+                string getItemIDQuery = "SELECT ItemID FROM Menu WHERE Item = @ItemName";
+                SqlCommand getItemIDCmd = new SqlCommand(getItemIDQuery, con);
+                getItemIDCmd.Parameters.AddWithValue("@ItemName", menuItem.Item);
+
+                try
+                {
+                    con.Open();
+                    int itemID = Convert.ToInt32(getItemIDCmd.ExecuteScalar());
+                    menuItem.ItemID = itemID;
+                }
+                catch (Exception ex)
+                {
+                    // Handle the case when the Item name does not exist in the Item table
+                    throw new Exception($"Error retrieving ItemID for '{menuItem.Item}': {ex.Message}");
+                }
+                finally
+                {
+                    con.Close();
+                }
+            }
+
             for (int i = 0; i < itemCount; i++)
             {
-                if (cart[i].MenuItem.Item == menuItem.Item)
+                if (cart[i].MenuItem.ItemID == menuItem.ItemID)
                 {
                     cart[i].Quantity++;
                     DisplayCart();
@@ -151,6 +179,26 @@ namespace Manager_asm
             finally
             {
                 con.Close();
+            }
+        }
+        public DataTable GetOrder(int customerId)
+        {
+            string query = @"
+SELECT o.OrderID, m.Item, m.Price, o.Status
+FROM [Order] o
+INNER JOIN OrderDetails od ON o.OrderID = od.OrderID
+INNER JOIN Menu m ON od.ItemID = m.ItemID
+WHERE o.CustomerID = @CustomerID";
+
+            using (SqlCommand command = new SqlCommand(query, con))
+            {
+                command.Parameters.AddWithValue("@CustomerID", customerId);
+                con.Open();
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable dataTable = new DataTable();
+                adapter.Fill(dataTable);
+                con.Close();
+                return dataTable;
             }
         }
     }

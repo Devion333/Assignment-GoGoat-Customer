@@ -30,11 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Page_Orders));
             this.panel5 = new System.Windows.Forms.Panel();
+            this.dataOrder = new System.Windows.Forms.DataGridView();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.orderData = new System.Windows.Forms.DataGridView();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataOrder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderData)).BeginInit();
             this.SuspendLayout();
             // 
             // panel5
@@ -47,6 +48,18 @@
             this.panel5.Size = new System.Drawing.Size(2045, 138);
             this.panel5.TabIndex = 17;
             // 
+            // dataOrder
+            // 
+            this.dataOrder.BackgroundColor = System.Drawing.Color.SeaShell;
+            this.dataOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataOrder.Location = new System.Drawing.Point(497, 258);
+            this.dataOrder.Margin = new System.Windows.Forms.Padding(2);
+            this.dataOrder.Name = "dataOrder";
+            this.dataOrder.RowHeadersWidth = 74;
+            this.dataOrder.RowTemplate.Height = 31;
+            this.dataOrder.Size = new System.Drawing.Size(1083, 521);
+            this.dataOrder.TabIndex = 18;
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
@@ -58,31 +71,33 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
-            // orderData
+            // lblTitle
             // 
-            this.orderData.BackgroundColor = System.Drawing.Color.SeaShell;
-            this.orderData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.orderData.Location = new System.Drawing.Point(497, 258);
-            this.orderData.Margin = new System.Windows.Forms.Padding(2);
-            this.orderData.Name = "orderData";
-            this.orderData.RowHeadersWidth = 74;
-            this.orderData.RowTemplate.Height = 31;
-            this.orderData.Size = new System.Drawing.Size(1083, 521);
-            this.orderData.TabIndex = 18;
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12.06936F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.Chocolate;
+            this.lblTitle.Location = new System.Drawing.Point(947, 176);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(116, 32);
+            this.lblTitle.TabIndex = 19;
+            this.lblTitle.Text = "ORDERS";
             // 
             // Page_Orders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.orderData);
+            this.Controls.Add(this.lblTitle);
+            this.Controls.Add(this.dataOrder);
             this.Controls.Add(this.panel5);
             this.Name = "Page_Orders";
             this.Size = new System.Drawing.Size(2045, 844);
             this.Load += new System.EventHandler(this.Page_Orders_Load);
             this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataOrder)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderData)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -90,6 +105,7 @@
 
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.DataGridView orderData;
+        private System.Windows.Forms.DataGridView dataOrder;
+        private System.Windows.Forms.Label lblTitle;
     }
 }

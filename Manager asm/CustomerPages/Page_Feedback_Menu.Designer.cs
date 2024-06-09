@@ -68,8 +68,6 @@
             this.lblComments = new System.Windows.Forms.Label();
             this.richFoodFeedback = new System.Windows.Forms.RichTextBox();
             this.btnSubmitfood = new System.Windows.Forms.Button();
-            this.lblPick = new System.Windows.Forms.Label();
-            this.cmbOrderID = new System.Windows.Forms.ComboBox();
             this.grpFood.SuspendLayout();
             this.grpStaff.SuspendLayout();
             this.grpPrice.SuspendLayout();
@@ -85,7 +83,7 @@
             this.lblHeader.Location = new System.Drawing.Point(434, 14);
             this.lblHeader.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(296, 44);
+            this.lblHeader.Size = new System.Drawing.Size(197, 29);
             this.lblHeader.TabIndex = 28;
             this.lblHeader.Text = "Please rate us!";
             // 
@@ -533,32 +531,11 @@
             this.btnSubmitfood.UseVisualStyleBackColor = true;
             this.btnSubmitfood.Click += new System.EventHandler(this.button1_Click);
             // 
-            // lblPick
-            // 
-            this.lblPick.AutoSize = true;
-            this.lblPick.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.06936F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPick.Location = new System.Drawing.Point(370, 60);
-            this.lblPick.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblPick.Name = "lblPick";
-            this.lblPick.Size = new System.Drawing.Size(309, 44);
-            this.lblPick.TabIndex = 43;
-            this.lblPick.Text = "Pick your order:";
-            // 
-            // cmbOrderID
-            // 
-            this.cmbOrderID.FormattingEnabled = true;
-            this.cmbOrderID.Location = new System.Drawing.Point(586, 61);
-            this.cmbOrderID.Name = "cmbOrderID";
-            this.cmbOrderID.Size = new System.Drawing.Size(90, 28);
-            this.cmbOrderID.TabIndex = 44;
-            // 
             // Page_Feedback_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.cmbOrderID);
-            this.Controls.Add(this.lblPick);
             this.Controls.Add(this.btnSubmitfood);
             this.Controls.Add(this.richFoodFeedback);
             this.Controls.Add(this.lblComments);
@@ -625,7 +602,5 @@
         private System.Windows.Forms.Label lblComments;
         private System.Windows.Forms.RichTextBox richFoodFeedback;
         private System.Windows.Forms.Button btnSubmitfood;
-        private System.Windows.Forms.Label lblPick;
-        private System.Windows.Forms.ComboBox cmbOrderID;
     }
 }

@@ -22,7 +22,20 @@ namespace Manager_asm
 
         private void btneditprofile_Click(object sender, EventArgs e)
         {
-           // Page_PI_Profile_Edit obj = Page_PI_Profile_Edit();
+           Page_PI_Profile_Edit obj = new Page_PI_Profile_Edit(username);
+            obj.Show();
+
+        }
+
+        private void Page_PI_Load(object sender, EventArgs e)
+        {
+            Manager obj = new Manager(username);
+            Manager.viewProfile(obj);
+
+            lblName.Text = obj.ManName;
+            lblEmail.Text = obj.Email;
+            lblPhoneNum.Text = obj.PhoneNum;
+            lblAddress.Text = obj.Address;
 
         }
     }

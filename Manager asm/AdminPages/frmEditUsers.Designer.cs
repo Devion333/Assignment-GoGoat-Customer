@@ -46,6 +46,7 @@
             // 
             // btnAdd
             // 
+            this.btnAdd.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -60,6 +61,7 @@
             // 
             // btnDelete
             // 
+            this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -74,6 +76,7 @@
             // 
             // btnEdit
             // 
+            this.btnEdit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -88,6 +91,7 @@
             // 
             // txtSearch
             // 
+            this.txtSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSearch.Location = new System.Drawing.Point(296, 34);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(202, 20);
@@ -95,6 +99,7 @@
             // 
             // btnSearch
             // 
+            this.btnSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSearch.Location = new System.Drawing.Point(520, 32);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
@@ -105,6 +110,7 @@
             // 
             // lblSearch
             // 
+            this.lblSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSearch.AutoSize = true;
             this.lblSearch.Location = new System.Drawing.Point(296, 15);
             this.lblSearch.Name = "lblSearch";
@@ -114,6 +120,7 @@
             // 
             // lblUser
             // 
+            this.lblUser.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblUser.AutoSize = true;
             this.lblUser.Location = new System.Drawing.Point(293, 105);
             this.lblUser.Name = "lblUser";
@@ -123,6 +130,7 @@
             // 
             // lblPass
             // 
+            this.lblPass.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPass.AutoSize = true;
             this.lblPass.Location = new System.Drawing.Point(293, 171);
             this.lblPass.Name = "lblPass";
@@ -132,6 +140,7 @@
             // 
             // lblRole
             // 
+            this.lblRole.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblRole.AutoSize = true;
             this.lblRole.Location = new System.Drawing.Point(296, 235);
             this.lblRole.Name = "lblRole";
@@ -141,6 +150,7 @@
             // 
             // txtUser
             // 
+            this.txtUser.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtUser.Location = new System.Drawing.Point(296, 121);
             this.txtUser.Name = "txtUser";
             this.txtUser.ReadOnly = true;
@@ -149,6 +159,7 @@
             // 
             // txtPass
             // 
+            this.txtPass.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPass.Location = new System.Drawing.Point(296, 187);
             this.txtPass.Name = "txtPass";
             this.txtPass.ReadOnly = true;
@@ -157,6 +168,7 @@
             // 
             // txtRole
             // 
+            this.txtRole.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtRole.Location = new System.Drawing.Point(296, 251);
             this.txtRole.Name = "txtRole";
             this.txtRole.ReadOnly = true;
@@ -165,6 +177,7 @@
             // 
             // btnSave
             // 
+            this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -179,6 +192,7 @@
             // 
             // txtUserid
             // 
+            this.txtUserid.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtUserid.Location = new System.Drawing.Point(371, 73);
             this.txtUserid.Name = "txtUserid";
             this.txtUserid.ReadOnly = true;
@@ -190,7 +204,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.txtUserid);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtRole);
@@ -206,7 +219,7 @@
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
             this.Name = "frmEditUsers";
-            this.Text = "frmEditUsers";
+            this.Size = new System.Drawing.Size(800, 450);
             this.ResumeLayout(false);
             this.PerformLayout();
 

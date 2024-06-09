@@ -89,6 +89,36 @@
     <Compile Include="CustomerPages\frmPayment.Designer.cs">
       <DependentUpon>frmPayment.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomerPages\Page_ProfileCus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomerPages\Page_ProfileCus.Designer.cs">
+      <DependentUpon>Page_ProfileCus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerPages\Page_CusEditPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerPages\Page_CusEditPassword.Designer.cs">
+      <DependentUpon>Page_CusEditPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerPages\Page_ProfileCusLogin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomerPages\Page_ProfileCusLogin.Designer.cs">
+      <DependentUpon>Page_ProfileCusLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerPages\Page_ProfileCus_PI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomerPages\Page_ProfileCus_PI.Designer.cs">
+      <DependentUpon>Page_ProfileCus_PI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerPages\Page_ProfileCusPIEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerPages\Page_ProfileCusPIEdit.Designer.cs">
+      <DependentUpon>Page_ProfileCusPIEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAdminUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,7 +193,6 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="GoDBDataSet.Designer.cs" />
     <Compile Include="ManagerPages\frmManagerUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -303,8 +332,23 @@
     <EmbeddedResource Include="CustomerPages\Page_Orders.resx">
       <DependentUpon>Page_Orders.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustomerPages\Page_ProfileCus.resx">
+      <DependentUpon>Page_ProfileCus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerPages\Page_CusEditPassword.resx">
+      <DependentUpon>Page_CusEditPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerPages\Page_ProfileCusLogin.resx">
+      <DependentUpon>Page_ProfileCusLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerPages\Page_ProfileCus_PI.resx">
+      <DependentUpon>Page_ProfileCus_PI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomerPages\Page_Request.resx">
       <DependentUpon>Page_Request.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerPages\Page_ProfileCusPIEdit.resx">
+      <DependentUpon>Page_ProfileCusPIEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAdminUI.resx">
       <DependentUpon>frmAdminUI.cs</DependentUpon>
@@ -371,13 +415,6 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="GoDBDataSet.xsc">
-      <DependentUpon>GoDBDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="GoDBDataSet.xsd" />
-    <None Include="GoDBDataSet.xss">
-      <DependentUpon>GoDBDataSet.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

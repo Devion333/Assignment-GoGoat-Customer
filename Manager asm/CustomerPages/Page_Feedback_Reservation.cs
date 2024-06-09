@@ -25,22 +25,9 @@ namespace Manager_asm.CustomerPages
 
         private void Page_Feedback_Reservation_Load(object sender, EventArgs e)
         {
-            // Fetch the customer's previous order IDs from the database
-            using (SqlConnection conn = new SqlConnection(con))
-            {
-                conn.Open();
-                string query = "SELECT ReservationID FROM Reservation WHERE CustomerID = @CustomerID";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@CustomerID", customerID); //get customerid from login
-
-                SqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    cmbOrderID.Items.Add(reader["OrderID"]);
-                }
-                reader.Close();
-            }
+          
         }
+
         private string GetSelectedValue(GroupBox groupBox)
         {
             foreach (RadioButton radioButton in groupBox.Controls.OfType<RadioButton>())
@@ -57,9 +44,8 @@ namespace Manager_asm.CustomerPages
         {
             try
             {
-
                 // Get the selected values from the radio buttons
-                string atmoshpere = GetSelectedValue(grpAtmosphere);
+                string atmosphere = GetSelectedValue(grpAtmosphere);
                 string cleanliness = GetSelectedValue(grpCleanliness);
                 string ease = GetSelectedValue(grpEase);
                 string flexibility = GetSelectedValue(grpFlexibility);
@@ -69,13 +55,15 @@ namespace Manager_asm.CustomerPages
                 string comments = richResFeedback.Text;
 
                 // Create an instance of the Customer class
-                customer = new Customer(1);
+                customer = new Customer(customerID);
 
-                // Call the SubmitFeedback method
-                string result = customer.SubmitFeedbackReservation(atmoshpere, cleanliness, music, ease, flexibility, comments);
+                // Call the SubmitFeedbackReservation method
+                string result = customer.SubmitFeedbackReservation(atmosphere, cleanliness, music, ease, flexibility, comments);
 
                 // Display the result
                 MessageBox.Show(result);
+
+
             }
             catch (Exception ex)
             {

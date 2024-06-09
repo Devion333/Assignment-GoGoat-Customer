@@ -102,22 +102,7 @@ namespace Manager_asm.CustomerPages
         }
         private void Page_Feedback_Food_Load(object sender, EventArgs e)
         {
-            // Fetch the customer's previous order IDs from the database
-            {
-                
-                con.Open();
-                string query = "SELECT FeedbackFoodID FROM FeedbackFood WHERE CustomerID = @CustomerID";
-                SqlCommand cmd = new SqlCommand(query, con);
-                cmd.Parameters.AddWithValue("@CustomerID", customerID); 
-
-                SqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    cmbOrderID.Items.Add(reader["FeedbackFoodID"]);
-                }
-                reader.Close();
-                con.Close();
-            }
+           
         }
     }
 
